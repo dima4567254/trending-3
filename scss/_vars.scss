@@ -1,0 +1,204 @@
+/*$Butler: 'Butler',
+sans-serif;*/
+
+
+$orange: #f2b125;
+$active: #fb0909;
+$red: #f02f23;
+$red2: #cd312a;
+$ac: black;
+$green: #14B4BE;
+$green2: #3bed23;
+$white: #FFFFFF;
+$white2: #fefeff;
+$white3: #dfdfe0;
+$blue: #34abdf;
+$blue1: #5677b9;
+$blue2: #39a6d4;
+$blue3: #235f85;
+
+$black: #000000;
+$black2: #202234;
+$black3: #1b1c27;
+$black4: #2f2f33;
+$gray: #63636a;
+$gray1: #ecede7;
+$gray2: #cacad1;
+$gray3: #7d7d82;
+$gray4: #44444a;
+$gray5: #81827e;
+
+
+$gold: gold;
+$blue: blue;
+$title: #436372;
+
+
+// $ac: #fcd7b6;
+
+// /*accent*/
+
+// $antique:#fde7d3;
+// $default: #243f4d;
+// $title: #436372;
+// $Cream: #feefe2;
+// $Crayola: #c2d2db;
+// $red: #e72828;
+// $red1 :#fe3e57;
+// $orange: #ffa500;
+// $blue1: #4c636e;
+// $blue2: #1638cc;
+// $blue3: #234969;
+// $blue4: #a3bbc8;
+// $black1: #000000;
+// $black2: #414141;
+// $black3: #333333;
+// $white1: #191919;
+// $white2: #eef2f5;
+// $white3: #fef7f0;
+// $white4: #e8e4df;
+// $white5:#fefefe;
+// $white6:#fafafa;
+// $white7:#dae4e9;
+// $white8:#e5e5e5;
+// $white9:#fbfbfb;
+// $white10:#fffefe;
+// $white11: #f2f2f2;
+// $white12:#f8f8f8;
+// $white13:#ffffff;
+// $white14: #edf1f4;
+// $white15:#ebeef3;
+// $grey1:#4c4c4c;
+// $grey2:#666666;
+// $grey3:#585858;
+// $grey4:#69778a;
+// $grey5:#e0e0e0;
+// $grey6: #9a9a9a;
+// $grey7:#ebebeb;
+// $grey8:#b8b8b8;
+// $grey9: #999999;
+// $grey10: #8d8d8d;
+// $grey11: #bfbfbf;
+// $green: #14B4BE;
+/*$ac: #fcd7b6;
+
+/*accent*/
+/*
+$antique:#fde7d3;
+$default: #243f4d;
+$title: #436372;
+$Cream: #feefe2;
+$Crayola: #c2d2db;
+$red: #e72828;
+$red1 :#fe3e57;
+$orange: #ffa500;
+
+$active: #fb0909;
+$ac: #fcd7b6;
+$green:#14B4BE;
+*/
+
+@mixin clamp($line-clamp, ) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+@mixin clamp2($max-width, $inline-block) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: $inline-block;
+  max-width: $max-width;
+
+}
+
+@mixin line-height($font-size, $line-height, ) {
+
+  line-height: ($line-height / $font-size)
+}
+
+
+
+
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+// &__Support {
+//     line-height: em(32px);
+
+// }
+
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+// @include rem-fallback(margin, 10, 20, 30, 40);
+
+
+
+
+
+
+
+
+
+//REM
+// @function rem($px) {
+// 	$result: math.div($px, 16) + rem;
+// 	@return $result;
+// }
+//EM
+// @function em($px, $current: 16) {
+//     $result: math.div($px, $current)+em;
+//     @return $result;
+// }
+
+// $px: 1;
+// $current: 1;
+/*
+@include clamp(5);
+@include line-height(5);
+
+*/

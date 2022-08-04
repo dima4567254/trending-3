@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="32" viewBox="0 0 83 32">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 22.068px;
+        fill: #fff;
+        font-family: Poppins;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #f2b125;
+      }
+    </style>
+  </defs>
+  <text id="Logo." class="cls-1" transform="translate(-1.646 22.944) scale(1.45)">Logo<tspan class="cls-2">.</tspan></text>
+</svg>

@@ -1,0 +1,45 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'), url('./fonts/Poppins-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Poppins-SemiBold.woff2') format('woff2'), url('./fonts/Poppins-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'notosans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/notosans-regular.woff2') format('woff2'), url('./fonts/notosans-regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'notosans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/notosans-bold.woff2') format('woff2'), url('./fonts/notosans-bold.woff') format('woff');
+    font-display: swap;
+}
+
+
+
+/*100 - thin
+200 - UltraLite
+300 - lite
+400 - normal,Regular
+500 - medium
+600 - semibold
+700 - bold
+800 - Heavy
+900 - black*/
